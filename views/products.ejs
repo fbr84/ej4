@@ -1,0 +1,14 @@
+<%-include ("./partials/head.ejs")%>
+<%-include ("./partials/nav.ejs")%>
+    <main>
+        <h1>Productos</h1>
+        <% if(productos.length > 0){ %>
+            <% productos.forEach(producto => { %>
+                <h3 class="title"><%=producto.title%></h3>
+                <p class="precio"><%=producto.precio%></p>
+            <% }) %>
+        <% } else { %>
+            <h3>No hay blogs</h3>
+        <% } %>
+    </main>
+<%-include ("./partials/footer.ejs")%>
